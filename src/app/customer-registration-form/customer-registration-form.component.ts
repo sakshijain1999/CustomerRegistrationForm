@@ -80,8 +80,11 @@ export class CustomerRegistrationFormComponent implements OnInit {
         console.log('companyDetail -> Api -> res', res);
       
       });
-      this.router.navigate(['/view']);
+      // this.router.navigate(['/view']);
 
+  }
+  view(){
+    this.router.navigate(['/view']);
   }
 
   removeSafetyModule(i: any) {

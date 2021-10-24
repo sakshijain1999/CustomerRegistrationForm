@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="container-fluid card" style="background-color: white;margin-top: 20px !important;">
     <div class="container">
       <div class="col-12">
@@ -61,4 +61,130 @@
         </div>
       </div>
     </div>
+   -->
+   <div class="basic-container">
+
+    <form class="container card"
+      style="background-color:lightcyan;margin-top: 50px !important; margin-bottom: 50px !important; margin-left: 50px !important;  margin-right: 50px !important;width:80rem"
+      [formGroup]="companyDetail" (ngSubmit)="onFormSubmit()">
+      <h1 class="mt-2 pt-3">
+        <p class="text-center ">  Customer Registration Form and View Details</p>
+      </h1>
+      <div>
+        <div class="col-6 justify content center" class="container card mt-2">
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <p for="exampleFormControlInput1" class="form-Label">Customer Name<span class="star">*</span> </p>
+              <input type="text" formControlName="name" class="form-control " > {{details.name}}
   
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-12">
+              <p for="exampleFormControlInput1" class="form-Label">Email<span class="star">*</span></p>
+              <input type="text" formControlName="email" class="form-control sign"> {{details.email}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p for="exampleFormControlInput1" class="form-Label">Phone Number <span class="star">*</span></p>
+              <input type="number" formControlName="phone" class="form-control sign" > {{details.phone}}
+          
+            </div>
+          </div>
+         
+  
+  
+          <br>
+        </div>
+  
+        <br>
+        <br>
+        <br>
+  
+  
+        <br>
+  
+  
+        <ng-container formArrayName="arrObj">
+          <ng-container *ngFor="let control of add().controls; let i = index" [formGroupName]="i">
+            <div class="col-6" class="container card mt-2"  *ngFor="let branch of details.arrObj" >
+  
+              <h1 class="mt-1 ">
+                <p class="text-center ">Branch {{branch.[i]}}</p>
+              </h1>
+  
+              <div class="row" >
+                <div class="col-md-12 ">
+                  <p for="exampleFormControlInput1" class="form-Label">Branch Name <span class="star">*</span></p>
+                  <input type="text" formControlName="names" class="form-control sign"  > {{branch.names}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p for="exampleFormControlInput1" class="form-Label">Email <span class="star">*</span></p>
+                  <input type="text" formControlName="emails" class="form-control sign"  >{{branch.emails}}
+              
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p for="exampleFormControlInput1" class="form-Label">Phone Number <span class="star">*</span></p>
+                  <input type="number" formControlName="number" class="form-control sign">{{branch.number}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p for="exampleFormControlInput1" class="form-Label">Branch City <span class="star">*</span></p>
+                  <input type="text" formControlName="city" class="form-control sign ">{{branch.city}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p for="exampleFormControlInput1" class="form-Label">Branch Address <span class="star">*</span></p>
+                  <textarea rows="3" type="text" formControlName="address" class="form-control sign" >{{branch.address}}</textarea>
+                
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div style="padding: 0px" class="col-md-6">
+                  <div class="form-check form-check-inline">
+                    <label for="exampleFormControlInput1" class="form-Label">Branch Types </label>
+                    <input class="form-check-input" type="radio" name="postionRep" id="inlineCheckbox1" value="option1" />
+                    <label class="form-check-label " for="inlineCheckbox1">Main Branch :</label>
+                  </div>
+                  <div class="form-check form-check-inline ml-2">
+                    <input class="form-check-input checkbox-lg" type="radio" name="postionRep" id="inlineCheckbox2"
+                      value="option1"/>
+                    <label class="form-check-label ml-1" for="inlineCheckbox2">Sub Branch :</label>
+                  </div>
+  
+                </div>
+              </div>
+              <br>
+              <label class="form-check-label " for="inlineCheckbox"> Branch Bussiness:</label>
+  
+              <div style="padding: 0px" class="col-md-6" *ngFor="let branch of branches">
+                <div class="checkrdobtn">
+                  <input class="rdovstchk" type="checkbox" class="mr-1" [value]="branch.value"
+                    (change)="onbranches($event)" />
+                  <span class="txtdefault fs-16 weight500 text-center">{{
+                    branch.name
+                    }}</span>
+                </div>
+              </div>
+  
+            </div>
+          </ng-container>
+  
+        </ng-container>
+  
+        <br>
+  
+  
+      </div>
+    </form>
+  </div>
