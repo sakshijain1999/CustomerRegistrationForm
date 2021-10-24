@@ -1,0 +1,100 @@
+ label:not(.form-check-label):not(.custom-file-label) {
+    font-weight: 500;
+  }
+  input:focus {
+    border: 2px solid dodgerblue;
+  }
+  label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    word-break: break-word;
+    font-family: Inter, sans-serif;
+  }
+  .form-control:hover {
+    border-color: rgba(46, 105, 255, 0.5);
+    box-shadow: 0 0 0 2px rgb(46 105 255 / 25%);
+  }
+  .pt-3 {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    word-break: break-word;
+    font-family: Inter, sans-serif;
+   color: blue;
+
+  }
+  .mt-1{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    word-break: break-word;
+    font-family: Inter, sans-serif;
+   color: blue;
+  }
+ 
+  .form-Label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    word-break: break-word;
+    font-family: Inter, sans-serif;
+    width: 100%;
+    margin-left: 2px;
+    margin-bottom: 14px;
+  }
+ 
+ 
+ .cards{
+
+
+  margin-left:auto;
+  margin-right:auto;  
+background-color: lightgreen;
+}
+.form-check-input:hover {
+  border-color: rgba(46, 105, 255, 0.5);
+  box-shadow: 0 0 0 2px rgb(46 105 255 / 25%);
+}
+.form-check-input {
+  width: 15px;
+  height: 15px;
+}
+input[type='checkbox']:hover {
+  border: 1px solid;
+  border-color: #2e69ff40;
+  box-shadow: 0 0 0 3px rgb(46, 105, 255, 0.25);
+  height: 15px;
+  width: 15px;
+  
+}
+
+input[type='checkbox']:focus {
+  border: 1px solid;
+  border-color: #2e69ff40;
+  box-shadow: 0 0 0 3px rgb(46, 105, 255, 0.25);
+  height: 15px;
+  width: 15px;
+}
+
+input[type='checkbox'] {
+  border: 5px solid rgb(0, 217, 255);
+  box-shadow: 10px solid rgb(0, 217, 255);
+  position: relative;
+  border-radius: 2px;
+  height: 15px;
+  width: 15px;
+  
+}
+.star{
+color: red;
+}
+.is-invalid {
+  border: 1px solid red;
+  box-shadow: 1px solid rgba(253, 8, 8, 0.678);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
